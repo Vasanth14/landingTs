@@ -1,0 +1,51 @@
+.footer {
+    padding: 64px 0;
+    background: #5D6273;
+
+    >div {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .footermenflex {
+        display: flex;
+        justify-content: center;
+        gap: 6rem;
+        padding-bottom: 40px;
+        border-bottom: 4px solid #ffffff;
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 8px;
+        }
+    }
+
+    .footerlogoflex {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding-top: 40px;
+    }
+
+    .cmpmark {
+        text-align: center;
+        padding-top: 40px;
+
+        p{
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .footer .footermenflex{
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+}

@@ -1,0 +1,138 @@
+@import '../../styles/variables.scss';
+
+
+.customSlider {
+    position: relative;
+}
+
+.carousal {
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    filter: brightness(0.8);
+
+}
+
+.slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.7) 100%);
+    pointer-events: none;
+    /* Allows clicks to pass through */
+}
+
+.logoHero {
+    width: 100%;
+    max-width: 500px;
+}
+
+.heroLogodiv {
+    margin-bottom: 30px;
+}
+
+.heroContents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.heroSub {
+    background: #6A45FF;
+    padding: 4px;
+    margin: 14px 0px;
+}
+
+.heroSub p {
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 8px;
+    color: $secondary-color;
+}
+
+.herop p,
+.scrollSec p {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: $secondary-color;
+    letter-spacing: 8px;
+    line-height: 32px;
+}
+
+.scrollSec {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+}
+.scrollSec p {
+    position: relative;
+}
+.scrollSec p::after {
+    content: "";
+    background-image: url('../../../public/assets/images/scrollline.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -99;
+}
+
+@media (max-width:1200px) {
+    .logoHero {
+        max-width: 320px;
+    }
+}
+
+@media (max-width:991px) {
+    .logoHero {
+        max-width: 240px;
+    }
+    .heroSub p {
+        font-size: 24px;
+    }
+    .herop p, .scrollSec p {
+        font-size: 18px;
+    }
+    .slider {
+        height: 640px;
+    }
+    .slide {
+        object-fit: fill;
+    }
+}
+
+@media (max-width: 767px) {
+    .logoHero {
+        max-width: 204px;
+    }
+}

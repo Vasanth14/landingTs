@@ -1,0 +1,39 @@
+.customlogodiv {
+    padding: 20vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .customlogodes {
+        width: 0;
+        height: 0;
+        border-color: #FF5252 #E9FF60 #6587FF #8BFF54;
+        border-style: solid;
+        border-width: 75px;
+        animation: logoAnimation 4s infinite ease-in-out;
+    }
+
+}
+
+
+@keyframes logoAnimation {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    25% {
+      transform: rotate(90deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1);
+    }
+    75% {
+      transform: rotate(270deg) scale(1.5); 
+    }
+    85% {
+      transform: rotate(360deg) scale(1.5); 
+    }
+    100% {
+      transform: rotate(360deg) scale(1); 
+    }
+  }
+
