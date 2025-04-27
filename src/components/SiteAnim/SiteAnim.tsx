@@ -1,4 +1,3 @@
-import React from 'react';
 import './SiteAnim.scss';
 
 const SiteAnim: React.FC = () => {
